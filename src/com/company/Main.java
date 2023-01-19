@@ -1,10 +1,18 @@
 package com.company;
 
+import com.company.OOP_exercises.Programmer;
+import com.company.OOP_exercises.Student;
+import com.company.OOP_exercises.Teacher;
+
 import java.util.Arrays;
 
 public class Main {
 
     public static void main(String[] args) {
+        Student student = new Student("John", 1, 123456, "Na Rybnik 19, 01301 Teplicka n/V");
+        Student student1 = new Student("Sam", 2, 123456, "Na Rybnik 19, 01301 Teplicka n/V");
+        Programmer programmer = new Programmer(3000, 1000);
+        Teacher teacher = new Teacher(3000, 1000);
         System.out.println(totalDistance(0.1, 0.5, 300.0));
         System.out.println(equal(5, 3, 5));
         System.out.println(triangle(4, 3, 8));
@@ -13,7 +21,10 @@ public class Main {
         System.out.println(checkPalindrome("mom"));
         System.out.println(rps("rock", "paper"));
         System.out.println(differenceMaxMin(new int[]{2,5,-10,56,17,-125,25,56}));
-
+        System.out.println(student.getName() + " " + student.getStudentNumber() + " " + student.getPhoneNumber() + student.getAddress());
+        System.out.println(student1.getName() + " " + student1.getStudentNumber() + " " + student1.getPhoneNumber() + student1.getAddress());
+        System.out.println(programmer.getInfo());
+        System.out.println(teacher.getInfo());
     }
     //Snail exercise
     public static double totalDistance(double stepHeight, double stepLength, double towerHeight) {
